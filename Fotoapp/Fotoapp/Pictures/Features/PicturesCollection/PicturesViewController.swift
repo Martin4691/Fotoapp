@@ -10,6 +10,8 @@ import UIKit
 
 
 class PicturesViewController: UIViewController {
+    private let maxHorizontalCells: CGFloat = 0.0
+    private let marginBetweenCells: CGFloat = 0.0
     private let reuseIdentifier = String(describing: PicturesCell.self) // essto sirve para decir: PicturesCell
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -24,7 +26,9 @@ class PicturesViewController: UIViewController {
 }
 
 // MARK: UICollectionViewDataSource
+
 extension PicturesViewController: UICollectionViewDataSource {
+    // Este método no es necesario.
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -51,8 +55,20 @@ extension PicturesViewController: UICollectionViewDelegate {
     }
 }
 
+extension PicturesViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_: UICollectionView, layout: UICollectionViewLayout, sizeForItemAt: IndexPath) -> CGSize {
+        return CGSize(width: 75, height: 75)
+    }
+
+    func collectionView(_: UICollectionView, layout: UICollectionViewLayout, minimumLineSpacingForSectionAt: Int) -> CGFloat {
+        
+        return maxHorizontalCells
+    }
+
+    func collectionView(_: UICollectionView, layout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt: Int) -> CGFloat {
+        
+        return marginBetweenCells
+    }
 
 
-
-
-
+}
