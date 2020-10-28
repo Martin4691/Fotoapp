@@ -47,13 +47,42 @@
                                     <outlet property="delegate" destination="fjD-LL-bbq" id="Lbz-0B-YGX"/>
                                 </connections>
                             </collectionView>
+                            <stackView opaque="NO" alpha="0.75" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bez-ac-Blx">
+                                <rect key="frame" x="0.0" y="753" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDI-Px-knf" userLabel="Button1">
+                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="60"/>
+                                        <state key="normal" title="Years"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQk-Am-8gg" userLabel="Button2">
+                                        <rect key="frame" x="103.5" y="0.0" width="103.5" height="60"/>
+                                        <state key="normal" title="Months"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQ6-TO-JCy" userLabel="Button3">
+                                        <rect key="frame" x="207" y="0.0" width="103.5" height="60"/>
+                                        <state key="normal" title="Days"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeW-Ne-aUl" userLabel="Button4">
+                                        <rect key="frame" x="310.5" y="0.0" width="103.5" height="60"/>
+                                        <state key="normal" title="All Photos"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="FZt-Fj-MAL"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3ul-pf-Lqg"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
+                            <constraint firstItem="bez-ac-Blx" firstAttribute="leading" secondItem="3ul-pf-Lqg" secondAttribute="leading" id="2wr-Th-acy"/>
+                            <constraint firstItem="C0s-qR-zk6" firstAttribute="top" secondItem="3ul-pf-Lqg" secondAttribute="top" id="ChK-oY-MdB"/>
+                            <constraint firstItem="3ul-pf-Lqg" firstAttribute="bottom" secondItem="bez-ac-Blx" secondAttribute="bottom" id="L9V-X3-CWP"/>
+                            <constraint firstItem="3ul-pf-Lqg" firstAttribute="trailing" secondItem="bez-ac-Blx" secondAttribute="trailing" id="Zll-CH-F6J"/>
                             <constraint firstItem="3ul-pf-Lqg" firstAttribute="trailing" secondItem="C0s-qR-zk6" secondAttribute="trailing" id="hEy-na-hgd"/>
                             <constraint firstItem="3ul-pf-Lqg" firstAttribute="bottom" secondItem="C0s-qR-zk6" secondAttribute="bottom" id="u2T-7S-uWk"/>
-                            <constraint firstItem="C0s-qR-zk6" firstAttribute="top" secondItem="3ul-pf-Lqg" secondAttribute="top" id="vGg-2y-Yy7"/>
                             <constraint firstItem="C0s-qR-zk6" firstAttribute="leading" secondItem="3ul-pf-Lqg" secondAttribute="leading" id="wTq-j0-Gsx"/>
                         </constraints>
                     </view>
@@ -64,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ea4-WT-Pr6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1462" y="1509"/>
+            <point key="canvasLocation" x="-1462.3188405797102" y="1508.7053571428571"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Rs0-nu-cWW">
@@ -126,6 +155,9 @@
         <image name="rectangle.stack.fill" catalog="system" width="128" height="122"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
