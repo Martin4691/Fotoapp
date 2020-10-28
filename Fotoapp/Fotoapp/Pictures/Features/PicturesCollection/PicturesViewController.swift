@@ -4,10 +4,8 @@
 //
 //  Created by Martín on 26/10/2020.
 //
-
 import Foundation
 import UIKit
-
 
 class PicturesViewController: UIViewController {
   private let maxHorizontalCells: CGFloat = 0.0
@@ -23,16 +21,18 @@ class PicturesViewController: UIViewController {
   
   @IBOutlet weak var collectionView: UICollectionView!
   
+  var cellHeigth: CGFloat = 75
+  var cellWidth: CGFloat = 75
+  
   override func viewDidLoad() {
     let nib = UINib(nibName: reuseIdentifier, bundle: nil)
     // nib es igual que xib, pero con una nomenclatura antigua.
     collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
     super.viewDidLoad()
-    stackScreen1.layer.cornerRadius = 25  
+    stackScreen1.layer.cornerRadius = 25
   }
 }
 // MARK: UICollectionViewDataSource
-
 extension PicturesViewController: UICollectionViewDataSource {
   // Este método no es necesario.
   func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -76,7 +76,7 @@ extension PicturesViewController: UICollectionViewDelegate {
 
 extension PicturesViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_: UICollectionView, layout: UICollectionViewLayout, sizeForItemAt: IndexPath) -> CGSize {
-    return CGSize(width: 75, height: 75)
+    return CGSize(width: cellWidth, height: cellHeigth)
   }
   
   func collectionView(_: UICollectionView, layout: UICollectionViewLayout, minimumLineSpacingForSectionAt: Int) -> CGFloat {
@@ -89,51 +89,48 @@ extension PicturesViewController: UICollectionViewDelegateFlowLayout {
     return marginBetweenCells
   }
   
-  
   // AQUI COMENZAMOS CON LOS BOTONES DEL ESTACK DE LA PRIMERA PANTALLA.
-  
   func buttonSelected() {
     button1Out.isSelected = false
     button2Out.isSelected = false
     button3Out.isSelected = false
     button4Out.isSelected = false
   }
-  
   @IBAction func button1Touched(_ sender: UIButton) {
     buttonSelected()
     sender.isSelected = true
     
-    print("boton 1")
+    cellWidth = 414
+    cellHeigth = 414
+    collectionView.reloadData()
   }
   
   @IBAction func button2Touched(_ sender: UIButton) {
     buttonSelected()
     sender.isSelected = true
     
-    print("boton 2")
+    cellWidth = 207
+    cellHeigth = 207
+    collectionView.reloadData()
   }
   
   @IBAction func button3Touched(_ sender: UIButton) {
     buttonSelected()
     sender.isSelected = true
     
-    print("boton 3")
+    cellWidth = 103
+    cellHeigth = 103
+    collectionView.reloadData()
   }
   
   @IBAction func button4Touched(_ sender: UIButton) {
     buttonSelected()
     sender.isSelected = true
     
-    print("boton 4")
+    cellWidth = 56
+    cellHeigth = 56
+    collectionView.reloadData()
   }
-  
-  
-  
-  
-  
-  
-  
-  
   
   
   
