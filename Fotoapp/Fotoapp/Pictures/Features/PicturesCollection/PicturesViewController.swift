@@ -14,6 +14,13 @@ class PicturesViewController: UIViewController {
   private let marginBetweenCells: CGFloat = 0.0
   private let reuseIdentifier = String(describing: PicturesCell.self) // essto sirve para decir: PicturesCell
   
+  @IBOutlet weak var stackScreen1: UIStackView!
+  
+  @IBOutlet weak var button1Out: UIButton!
+  @IBOutlet weak var button2Out: UIButton!
+  @IBOutlet weak var button3Out: UIButton!
+  @IBOutlet weak var button4Out: UIButton!
+  
   @IBOutlet weak var collectionView: UICollectionView!
   
   override func viewDidLoad() {
@@ -21,6 +28,7 @@ class PicturesViewController: UIViewController {
     // nib es igual que xib, pero con una nomenclatura antigua.
     collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
     super.viewDidLoad()
+    stackScreen1.layer.cornerRadius = 25
   }
   
 }
@@ -82,6 +90,54 @@ extension PicturesViewController: UICollectionViewDelegateFlowLayout {
     
     return marginBetweenCells
   }
+  
+  
+          // AQUI COMENZAMOS CON LOS BOTONES DEL ESTACK DE LA PRIMERA PANTALLA.
+  
+  func buttonSelected() {
+    button1Out.isSelected = false
+    button2Out.isSelected = false
+    button3Out.isSelected = false
+    button4Out.isSelected = false
+  }
+  
+  @IBAction func button1Touched(_ sender: UIButton) {
+    buttonSelected()
+    sender.isSelected = true
+    
+    print("boton 1")
+  }
+  
+  @IBAction func button2Touched(_ sender: UIButton) {
+    buttonSelected()
+    sender.isSelected = true
+   
+    print("boton 2")
+  }
+  
+  @IBAction func button3Touched(_ sender: UIButton) {
+    buttonSelected()
+    sender.isSelected = true
+    
+    print("boton 3")
+  }
+  
+  @IBAction func button4Touched(_ sender: UIButton) {
+    buttonSelected()
+    sender.isSelected = true
+    
+    print("boton 4")
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
 }

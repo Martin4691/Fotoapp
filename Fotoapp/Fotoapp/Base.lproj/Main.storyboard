@@ -48,29 +48,66 @@
                                 </connections>
                             </collectionView>
                             <stackView opaque="NO" alpha="0.75" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bez-ac-Blx">
-                                <rect key="frame" x="0.0" y="753" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="773" width="414" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDI-Px-knf" userLabel="Button1">
-                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="60"/>
-                                        <state key="normal" title="Years"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="40"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Years">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="button1Touched:" destination="fjD-LL-bbq" eventType="touchUpInside" id="2XI-jr-B2R"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQk-Am-8gg" userLabel="Button2">
-                                        <rect key="frame" x="103.5" y="0.0" width="103.5" height="60"/>
-                                        <state key="normal" title="Months"/>
+                                        <rect key="frame" x="103.5" y="0.0" width="103.5" height="40"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Months">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="button2Touched:" destination="fjD-LL-bbq" eventType="touchUpInside" id="U87-mT-M8e"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQ6-TO-JCy" userLabel="Button3">
-                                        <rect key="frame" x="207" y="0.0" width="103.5" height="60"/>
-                                        <state key="normal" title="Days"/>
+                                        <rect key="frame" x="207" y="0.0" width="103.5" height="40"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Days">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="button3Touched:" destination="fjD-LL-bbq" eventType="touchUpInside" id="LhZ-3a-RDS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeW-Ne-aUl" userLabel="Button4">
-                                        <rect key="frame" x="310.5" y="0.0" width="103.5" height="60"/>
-                                        <state key="normal" title="All Photos"/>
+                                        <rect key="frame" x="310.5" y="0.0" width="103.5" height="40"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="All Photos">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="button4Touched:" destination="fjD-LL-bbq" eventType="touchUpInside" id="4yI-gk-wen"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="FZt-Fj-MAL"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="DXu-C5-p2g"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="pEa-LI-7Tl"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -89,6 +126,11 @@
                     <tabBarItem key="tabBarItem" title="Photos" image="photo.on.rectangle" catalog="system" id="jLh-ld-bKH"/>
                     <connections>
                         <outlet property="CollectionView" destination="C0s-qR-zk6" id="jXd-I3-tKK"/>
+                        <outlet property="button1Out" destination="ZDI-Px-knf" id="RhM-3v-9ir"/>
+                        <outlet property="button2Out" destination="IQk-Am-8gg" id="SFB-9n-cSE"/>
+                        <outlet property="button3Out" destination="GQ6-TO-JCy" id="PK5-T3-KWy"/>
+                        <outlet property="button4Out" destination="jeW-Ne-aUl" id="cIS-mV-Zdl"/>
+                        <outlet property="stackScreen1" destination="bez-ac-Blx" id="hZb-TY-CNZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ea4-WT-Pr6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
