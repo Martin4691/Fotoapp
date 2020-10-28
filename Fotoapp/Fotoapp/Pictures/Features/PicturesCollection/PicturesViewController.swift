@@ -28,11 +28,9 @@ class PicturesViewController: UIViewController {
     // nib es igual que xib, pero con una nomenclatura antigua.
     collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
     super.viewDidLoad()
-    stackScreen1.layer.cornerRadius = 25
+    stackScreen1.layer.cornerRadius = 25  
   }
-  
 }
-
 // MARK: UICollectionViewDataSource
 
 extension PicturesViewController: UICollectionViewDataSource {
@@ -54,7 +52,7 @@ extension PicturesViewController: UICollectionViewDataSource {
       pictureCell.label.text = "\(indexPath.row + 1)"
       
       //         METODO CESC: -------(para acceder a los pares/impares)
-
+      
       //            pictureCell.image.image = indexPath.row % 2 == 0 ? #imageLiteral(resourceName: "pic1"):#imageLiteral(resourceName: "pic2")
       
       //    metodo internet:  -------(para acceder a los pares/impares)
@@ -92,7 +90,7 @@ extension PicturesViewController: UICollectionViewDelegateFlowLayout {
   }
   
   
-          // AQUI COMENZAMOS CON LOS BOTONES DEL ESTACK DE LA PRIMERA PANTALLA.
+  // AQUI COMENZAMOS CON LOS BOTONES DEL ESTACK DE LA PRIMERA PANTALLA.
   
   func buttonSelected() {
     button1Out.isSelected = false
@@ -111,7 +109,7 @@ extension PicturesViewController: UICollectionViewDelegateFlowLayout {
   @IBAction func button2Touched(_ sender: UIButton) {
     buttonSelected()
     sender.isSelected = true
-   
+    
     print("boton 2")
   }
   
