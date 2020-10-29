@@ -30,31 +30,36 @@ class PicturesViewController: UIViewController {
     collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
     super.viewDidLoad()
     stackScreen1.layer.cornerRadius = 25
-  
+    
     // esto no funciona es lo de las esquinas de los botones:
-//    button1Out.layer.cornerRadius = 25
-//    button2Out.layer.cornerRadius = 25
-//    button3Out.layer.cornerRadius = 25
-//    button4Out.layer.cornerRadius = 25
+    //    button1Out.layer.cornerRadius = 25
+    //    button2Out.layer.cornerRadius = 25
+    //    button3Out.layer.cornerRadius = 25
+    //    button4Out.layer.cornerRadius = 25
   }
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     super.viewWillTransition(to: size, with: coordinator)
     
-   
+    // ------> GUARD LET SOLUTION:
     
+//    guard let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
+//
+//    if UIDevice.current.orientation.isLandscape {
+//      layout.scrollDirection = .horizontal
+//    } else if UIDevice.current.orientation.isPortrait {
+//      layout.scrollDirection = .vertical
+//    }
+//
+  
     if UIDevice.current.orientation.isLandscape {
       if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-          layout.scrollDirection = .horizontal
+        layout.scrollDirection = .horizontal
       }
-      
-      print("Landscape")
+      print("Landscape") 
     } else if UIDevice.current.orientation.isPortrait {
       if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-          layout.scrollDirection = .vertical
+        layout.scrollDirection = .vertical
       }
-      
-      
-      
       print("Portrait")
     } else if UIDevice.current.orientation.isFlat {
       print("Flat")
@@ -62,7 +67,7 @@ class PicturesViewController: UIViewController {
       print("Valid Interface Orientation")
     }
   }
-      
+  
 }
 
 // MARK: UICollectionViewDataSource
@@ -167,8 +172,8 @@ extension PicturesViewController: UICollectionViewDelegateFlowLayout {
   }
   
   
- 
-
-  }
   
+  
+}
+
 
