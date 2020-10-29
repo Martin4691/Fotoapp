@@ -30,12 +30,6 @@ class PicturesViewController: UIViewController {
     collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
     super.viewDidLoad()
     stackScreen1.layer.cornerRadius = 25
-    
-    // esto no funciona es lo de las esquinas de los botones:
-    //    button1Out.layer.cornerRadius = 25
-    //    button2Out.layer.cornerRadius = 25
-    //    button3Out.layer.cornerRadius = 25
-    //    button4Out.layer.cornerRadius = 25
   }
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     super.viewWillTransition(to: size, with: coordinator)
@@ -50,7 +44,6 @@ class PicturesViewController: UIViewController {
 //      layout.scrollDirection = .vertical
 //    }
 //
-  
     if UIDevice.current.orientation.isLandscape {
       if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
         layout.scrollDirection = .horizontal
@@ -67,7 +60,6 @@ class PicturesViewController: UIViewController {
       print("Valid Interface Orientation")
     }
   }
-  
 }
 
 // MARK: UICollectionViewDataSource
@@ -78,28 +70,16 @@ extension PicturesViewController: UICollectionViewDataSource {
   }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return  100
+    return  ImagesData.numOfImages()
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-    cell.backgroundColor = .blue
-    
     if let pictureCell = (cell as? PicturesCell) {
       pictureCell.label.text = "\(indexPath.row + 1)"
-      
-      //         METODO CESC: -------(para acceder a los pares/impares)
-      
-      //            pictureCell.image.image = indexPath.row % 2 == 0 ? #imageLiteral(resourceName: "pic1"):#imageLiteral(resourceName: "pic2")
-      
-      //    metodo internet:  -------(para acceder a los pares/impares)
-      if indexPath.row % 2 == 0 {
-        pictureCell.image.image = UIImage(named: "pic1")
-      } else {
-        pictureCell.image.image = UIImage(named: "pic2")
-      }
-      
+      pictureCell.image.image = ImagesData.imageForPosition(indexPath.row)
+    } else {
+      cell.backgroundColor = .black
     }
     return cell
   }
@@ -119,12 +99,10 @@ extension PicturesViewController: UICollectionViewDelegateFlowLayout {
   }
   
   func collectionView(_: UICollectionView, layout: UICollectionViewLayout, minimumLineSpacingForSectionAt: Int) -> CGFloat {
-    
     return maxHorizontalCells
   }
   
   func collectionView(_: UICollectionView, layout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt: Int) -> CGFloat {
-    
     return marginBetweenCells
   }
   
