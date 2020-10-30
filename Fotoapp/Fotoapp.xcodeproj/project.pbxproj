@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5B50C03525481706009FEE2A /* PicturesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B50C03425481706009FEE2A /* PicturesCell.xib */; };
+		5B7B62E9254C289800D780C4 /* PhotoFullVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7B62E8254C289800D780C4 /* PhotoFullVC.swift */; };
+		5B7B62EC254C306B00D780C4 /* PicturesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7B62EB254C306B00D780C4 /* PicturesViewModel.swift */; };
 		5B8F979E254ADC98007DED64 /* VfqFumqaLpQ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F9762254ADC94007DED64 /* VfqFumqaLpQ.jpg */; };
 		5B8F979F254ADC98007DED64 /* Id1DBHv4fbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F9763254ADC94007DED64 /* Id1DBHv4fbg.jpg */; };
 		5B8F97A0254ADC98007DED64 /* hiAdjnXZxl8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F9764254ADC94007DED64 /* hiAdjnXZxl8.jpg */; };
@@ -80,6 +82,8 @@
 
 /* Begin PBXFileReference section */
 		5B50C03425481706009FEE2A /* PicturesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicturesCell.xib; sourceTree = "<group>"; };
+		5B7B62E8254C289800D780C4 /* PhotoFullVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFullVC.swift; sourceTree = "<group>"; };
+		5B7B62EB254C306B00D780C4 /* PicturesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesViewModel.swift; sourceTree = "<group>"; };
 		5B8F9762254ADC94007DED64 /* VfqFumqaLpQ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VfqFumqaLpQ.jpg; sourceTree = "<group>"; };
 		5B8F9763254ADC94007DED64 /* Id1DBHv4fbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Id1DBHv4fbg.jpg; sourceTree = "<group>"; };
 		5B8F9764254ADC94007DED64 /* hiAdjnXZxl8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hiAdjnXZxl8.jpg; sourceTree = "<group>"; };
@@ -289,8 +293,10 @@
 			isa = PBXGroup;
 			children = (
 				5BB91E7425470A2800FD18C4 /* PicturesViewController.swift */,
+				5B7B62EB254C306B00D780C4 /* PicturesViewModel.swift */,
 				5B8F97DB254ADE16007DED64 /* ImagesData.swift */,
 				5BB91E7825470A3A00FD18C4 /* PicturesCell.swift */,
+				5B7B62E8254C289800D780C4 /* PhotoFullVC.swift */,
 				5B50C03425481706009FEE2A /* PicturesCell.xib */,
 			);
 			path = PicturesCollection;
@@ -431,7 +437,9 @@
 				5BB91E5C2546CF7800FD18C4 /* AppDelegate.swift in Sources */,
 				5B8F97DC254ADE16007DED64 /* ImagesData.swift in Sources */,
 				5BB91E7925470A3A00FD18C4 /* PicturesCell.swift in Sources */,
+				5B7B62E9254C289800D780C4 /* PhotoFullVC.swift in Sources */,
 				5BB91E5E2546CF7800FD18C4 /* SceneDelegate.swift in Sources */,
+				5B7B62EC254C306B00D780C4 /* PicturesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

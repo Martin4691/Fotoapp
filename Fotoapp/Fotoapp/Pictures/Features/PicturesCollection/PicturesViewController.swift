@@ -86,6 +86,8 @@ extension PicturesViewController: UICollectionViewDataSource {
 extension PicturesViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
+        PicturesViewModel.selectedImage = ImagesData.imageForPosition(indexPath.row)
+        performSegue(withIdentifier: "segueToDetail", sender: nil)
         print(indexPath.item)
     }
 }
