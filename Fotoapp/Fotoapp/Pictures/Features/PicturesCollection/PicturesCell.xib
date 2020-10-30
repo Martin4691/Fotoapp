@@ -19,8 +19,8 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic1" translatesAutoresizingMaskIntoConstraints="NO" id="uVC-nx-qRv" userLabel="Preview Image">
                         <rect key="frame" x="0.0" y="0.0" width="204" height="205"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clf-J0-u1e" userLabel="Title Label">
-                        <rect key="frame" x="93" y="78.5" width="18" height="48"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clf-J0-u1e" userLabel="Title Label">
+                        <rect key="frame" x="175" y="147" width="18" height="48"/>
                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -33,8 +33,8 @@
                     <constraint firstItem="uVC-nx-qRv" firstAttribute="centerY" secondItem="P7h-hP-VbB" secondAttribute="centerY" id="YsC-2I-ylm"/>
                     <constraint firstAttribute="bottom" secondItem="uVC-nx-qRv" secondAttribute="bottom" id="ckE-LY-Inn"/>
                     <constraint firstAttribute="trailing" secondItem="uVC-nx-qRv" secondAttribute="trailing" id="gUV-HI-3Hq"/>
-                    <constraint firstItem="clf-J0-u1e" firstAttribute="centerY" secondItem="P7h-hP-VbB" secondAttribute="centerY" id="ifm-Nj-2IO"/>
-                    <constraint firstItem="clf-J0-u1e" firstAttribute="centerX" secondItem="P7h-hP-VbB" secondAttribute="centerX" id="v4D-DK-MbM"/>
+                    <constraint firstAttribute="trailing" secondItem="clf-J0-u1e" secondAttribute="trailing" constant="10" id="p04-4h-WCL"/>
+                    <constraint firstAttribute="bottom" secondItem="clf-J0-u1e" secondAttribute="bottom" constant="10" id="rNF-jx-hdM"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="246" height="205"/>
