@@ -11,14 +11,28 @@
         <!--For You-->
         <scene sceneID="BR6-BM-6I0">
             <objects>
-                <viewController id="UAT-h6-mba" sceneMemberID="viewController">
+                <viewController id="UAT-h6-mba" customClass="RandomPicturesViewController" customModule="Fotoapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xbv-Ht-tFs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2T0-W0-YRM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dPe-LO-Egf"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="dPe-LO-Egf" firstAttribute="trailing" secondItem="2T0-W0-YRM" secondAttribute="trailing" id="2ca-tW-4kM"/>
+                            <constraint firstItem="2T0-W0-YRM" firstAttribute="top" secondItem="dPe-LO-Egf" secondAttribute="top" id="5Fv-Xb-o8B"/>
+                            <constraint firstItem="dPe-LO-Egf" firstAttribute="bottom" secondItem="2T0-W0-YRM" secondAttribute="bottom" id="JkY-VQ-Fdq"/>
+                            <constraint firstItem="2T0-W0-YRM" firstAttribute="leading" secondItem="dPe-LO-Egf" secondAttribute="leading" id="goV-Ii-wrt"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="For You" image="heart.text.square" catalog="system" id="YXi-9Y-wJr"/>
+                    <connections>
+                        <outlet property="imageView" destination="2T0-W0-YRM" id="Uac-ck-NaS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VGt-C9-F8P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,7 +126,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3ul-pf-Lqg"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="bez-ac-Blx" firstAttribute="leading" secondItem="3ul-pf-Lqg" secondAttribute="leading" id="2wr-Th-acy"/>
                             <constraint firstItem="C0s-qR-zk6" firstAttribute="top" secondItem="3ul-pf-Lqg" secondAttribute="top" id="ChK-oY-MdB"/>
@@ -234,8 +248,8 @@
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
