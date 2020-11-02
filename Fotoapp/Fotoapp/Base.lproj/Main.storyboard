@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--For You-->
+        <!--Presentation-->
         <scene sceneID="BR6-BM-6I0">
             <objects>
-                <viewController id="UAT-h6-mba" customClass="RandomPicturesViewController" customModule="Fotoapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UAT-h6-mba" userLabel="Presentation" customClass="RandomPicturesViewController" customModule="Fotoapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xbv-Ht-tFs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dPe-LO-Egf"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="dPe-LO-Egf" firstAttribute="trailing" secondItem="2T0-W0-YRM" secondAttribute="trailing" id="2ca-tW-4kM"/>
                             <constraint firstItem="2T0-W0-YRM" firstAttribute="top" secondItem="dPe-LO-Egf" secondAttribute="top" id="5Fv-Xb-o8B"/>
@@ -29,7 +29,7 @@
                             <constraint firstItem="2T0-W0-YRM" firstAttribute="leading" secondItem="dPe-LO-Egf" secondAttribute="leading" id="goV-Ii-wrt"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="For You" image="heart.text.square" catalog="system" id="YXi-9Y-wJr"/>
+                    <tabBarItem key="tabBarItem" title="Presentation" image="heart.text.square" catalog="system" id="YXi-9Y-wJr" userLabel="Presentacion"/>
                     <connections>
                         <outlet property="imageView" destination="2T0-W0-YRM" id="Uac-ck-NaS"/>
                     </connections>
@@ -256,9 +256,6 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -60,7 +60,7 @@ class RandomPicturesViewController: UIViewController {
     func refreshPicture() {
         UIView.transition(with: imageView,
                           duration: 1.0,
-                          options: .transitionCurlUp,
+                          options: .transitionFlipFromTop,
                           animations: {
                             self.imageView.image = self.getRandomPictures()
                           },
