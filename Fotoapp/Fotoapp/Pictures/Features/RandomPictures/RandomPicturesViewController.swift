@@ -14,18 +14,26 @@ class RandomPicturesViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
         refreshPicture()
-        // timer viejo de obj C:
-        //        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(refreshPicture), userInfo: nil, repeats: true)
-        
         //timer nuevo de Swift:
         timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true, block: { _ in self.refreshPicture()
         })
+        print("APPEAR!")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        timer.invalidate()
+        print("DISAPPEAR!")
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //            refreshPicture()
+        
+        // timer viejo de obj C:
+        //        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(refreshPicture), userInfo: nil, repeats: true)
         
         //          SOLUCION CESC para imagen aleatoria (tiene que ir dentro de la viewDidLoad):
         //        let randomNumber: Int = Int.random(in: 0..<ImagesData.numOfImages())
@@ -57,7 +65,6 @@ class RandomPicturesViewController: UIViewController {
                             self.imageView.image = self.getRandomPictures()
                           },
                           completion: nil)
-        
     }
     
 }
