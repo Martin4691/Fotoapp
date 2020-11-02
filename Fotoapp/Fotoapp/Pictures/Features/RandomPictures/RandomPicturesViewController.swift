@@ -12,6 +12,11 @@ class RandomPicturesViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         refreshPicture()
@@ -45,10 +50,14 @@ class RandomPicturesViewController: UIViewController {
     
     //timer nuevo de Swift:
     func refreshPicture() {
-        imageView.image = getRandomPictures()
+        UIView.transition(with: imageView,
+                          duration: 1.0,
+                          options: .transitionCurlUp,
+                          animations: {
+                            self.imageView.image = self.getRandomPictures()
+                          },
+                          completion: nil)
+        
     }
     
-    
-    
 }
-
