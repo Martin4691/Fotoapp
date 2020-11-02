@@ -14,11 +14,12 @@ class RandomPicturesViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        print("APPEAR!")
         refreshPicture()
-        //timer nuevo de Swift:
+        //timer nuevo de Swift(1):
         timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true, block: { _ in self.refreshPicture()
         })
-        print("APPEAR!")
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -26,7 +27,6 @@ class RandomPicturesViewController: UIViewController {
         timer.invalidate()
         print("DISAPPEAR!")
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +56,7 @@ class RandomPicturesViewController: UIViewController {
     //        imageView.image = getRandomPictures()
     //    }
     
-    //timer nuevo de Swift:
+    //timer nuevo de Swift(2):
     func refreshPicture() {
         UIView.transition(with: imageView,
                           duration: 1.0,
