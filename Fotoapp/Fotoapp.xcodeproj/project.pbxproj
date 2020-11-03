@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B48B53925514E2A007FFAAE /* PicturesFromUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B48B53825514E2A007FFAAE /* PicturesFromUserViewController.swift */; };
 		5B50C03525481706009FEE2A /* PicturesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B50C03425481706009FEE2A /* PicturesCell.xib */; };
 		5B7B62E9254C289800D780C4 /* PhotoFullVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7B62E8254C289800D780C4 /* PhotoFullVC.swift */; };
 		5B7B62EC254C306B00D780C4 /* PicturesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7B62EB254C306B00D780C4 /* PicturesViewModel.swift */; };
@@ -82,6 +83,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B48B53825514E2A007FFAAE /* PicturesFromUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesFromUserViewController.swift; sourceTree = "<group>"; };
 		5B50C03425481706009FEE2A /* PicturesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicturesCell.xib; sourceTree = "<group>"; };
 		5B7B62E8254C289800D780C4 /* PhotoFullVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFullVC.swift; sourceTree = "<group>"; };
 		5B7B62EB254C306B00D780C4 /* PicturesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesViewModel.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		5B8F7A7E254FF8B400F49543 /* PicturesFromUser */ = {
 			isa = PBXGroup;
 			children = (
+				5B48B53825514E2A007FFAAE /* PicturesFromUserViewController.swift */,
 			);
 			path = PicturesFromUser;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B48B53925514E2A007FFAAE /* PicturesFromUserViewController.swift in Sources */,
 				5BB91E7525470A2800FD18C4 /* PicturesViewController.swift in Sources */,
 				5BB91E5C2546CF7800FD18C4 /* AppDelegate.swift in Sources */,
 				5B8F97DC254ADE16007DED64 /* ImagesData.swift in Sources */,

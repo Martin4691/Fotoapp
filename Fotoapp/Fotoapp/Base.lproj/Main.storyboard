@@ -175,18 +175,46 @@
         <!--Item 3-->
         <scene sceneID="ypo-Ij-oZs">
             <objects>
-                <viewController title="Albums" id="vAU-Ig-VZh" userLabel="Item 3" sceneMemberID="viewController">
+                <viewController title="Albums" id="vAU-Ig-VZh" userLabel="Item 3" customClass="PicturesFromUserViewController" customModule="Fotoapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HVd-yY-BNx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="of4-uM-lb7" userLabel="image">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXl-7e-vfv" userLabel="button">
+                                <rect key="frame" x="274" y="743" width="120" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="NEV-8l-GuW"/>
+                                    <constraint firstAttribute="height" constant="50" id="msp-DD-jqq"/>
+                                </constraints>
+                                <state key="normal" title="Elige Foto">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonAct:" destination="vAU-Ig-VZh" eventType="touchUpInside" id="d2k-o0-mrb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UXl-tm-Lgp"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="UXl-tm-Lgp" firstAttribute="trailing" secondItem="VXl-7e-vfv" secondAttribute="trailing" constant="20" id="TC8-WW-tH8"/>
+                            <constraint firstItem="VXl-7e-vfv" firstAttribute="bottom" secondItem="UXl-tm-Lgp" secondAttribute="bottom" constant="-20" id="tTE-Np-Tqx"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Albums" image="rectangle.stack.fill" catalog="system" id="Ge2-sb-3AE"/>
+                    <connections>
+                        <outlet property="buttonOut" destination="VXl-7e-vfv" id="2TX-Nd-JS5"/>
+                        <outlet property="image" destination="of4-uM-lb7" id="DH8-3D-EWV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QbD-6z-46M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="187" y="1509"/>
+            <point key="canvasLocation" x="186.95652173913044" y="1508.7053571428571"/>
         </scene>
         <!--Item 4-->
         <scene sceneID="E4a-Ui-oSE">
@@ -245,6 +273,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
