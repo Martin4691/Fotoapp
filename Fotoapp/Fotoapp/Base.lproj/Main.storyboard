@@ -261,7 +261,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTH-S6-dKT">
                                 <rect key="frame" x="323" y="688" width="71" height="80"/>
                                 <subviews>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ni1-Ef-q6a">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ni1-Ef-q6a">
                                         <rect key="frame" x="11" y="42" width="51" height="31"/>
                                         <color key="onTintColor" systemColor="systemRedColor"/>
                                         <connections>
