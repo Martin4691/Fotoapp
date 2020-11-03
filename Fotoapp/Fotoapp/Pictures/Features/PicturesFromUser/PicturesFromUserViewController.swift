@@ -45,7 +45,7 @@ class PicturesFromUserViewController: UIViewController, UIImagePickerControllerD
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonOut.layer.cornerRadius = 10
-        image.image = UIImage(named: "pic1")
+        image.image = UIImage(named: "256")
         
     }
 

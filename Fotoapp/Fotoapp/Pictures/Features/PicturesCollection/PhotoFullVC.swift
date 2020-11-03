@@ -11,10 +11,30 @@ class PhotoFullVC: UIViewController {
 
     @IBOutlet weak var imageFullScreen: UIImageView!
     
+    
+    @IBOutlet weak var closeOutlet: UIButton!
+    
+    @IBAction func closeAction(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
+    @IBOutlet weak var switchOutlet: UISwitch!
+    
+    @IBAction func switchAction(_ sender: UISwitch) {
+        if switchOutlet.isOn == true {
+            print("Switch Is On!")
+        } else if switchOutlet.isOn == false {
+            print("Switch Is Off!")
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        closeOutlet.layer.cornerRadius = 20
         imageFullScreen.image = PicturesViewModel.selectedImage
+        
+        closeAction(self)
         
     }
     

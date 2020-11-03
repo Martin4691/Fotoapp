@@ -27,6 +27,7 @@ class PicturesViewController: UIViewController {
         collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
         super.viewDidLoad()
         stackScreen1.layer.cornerRadius = 25
+        
     }
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
