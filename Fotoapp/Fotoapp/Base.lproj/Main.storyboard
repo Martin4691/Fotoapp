@@ -29,7 +29,7 @@
                             <constraint firstItem="2T0-W0-YRM" firstAttribute="leading" secondItem="dPe-LO-Egf" secondAttribute="leading" id="goV-Ii-wrt"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Presentation" image="heart.text.square" catalog="system" id="YXi-9Y-wJr" userLabel="Presentacion"/>
+                    <tabBarItem key="tabBarItem" title="Presentation" image="rectangle.stack.fill" catalog="system" id="YXi-9Y-wJr" userLabel="Presentacion"/>
                     <connections>
                         <outlet property="imageView" destination="2T0-W0-YRM" id="Uac-ck-NaS"/>
                     </connections>
@@ -191,7 +191,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="NEV-8l-GuW"/>
                                     <constraint firstAttribute="height" constant="50" id="msp-DD-jqq"/>
                                 </constraints>
-                                <state key="normal" title="Elige Foto">
+                                <state key="normal" title="Choose Photo">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -200,13 +200,13 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UXl-tm-Lgp"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="UXl-tm-Lgp" firstAttribute="trailing" secondItem="VXl-7e-vfv" secondAttribute="trailing" constant="20" id="TC8-WW-tH8"/>
                             <constraint firstItem="VXl-7e-vfv" firstAttribute="bottom" secondItem="UXl-tm-Lgp" secondAttribute="bottom" constant="-20" id="tTE-Np-Tqx"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Albums" image="rectangle.stack.fill" catalog="system" id="Ge2-sb-3AE"/>
+                    <tabBarItem key="tabBarItem" title="Edition" image="rectangle.dashed" catalog="system" id="Ge2-sb-3AE"/>
                     <connections>
                         <outlet property="buttonOut" destination="VXl-7e-vfv" id="2TX-Nd-JS5"/>
                         <outlet property="image" destination="of4-uM-lb7" id="DH8-3D-EWV"/>
@@ -264,9 +264,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart.text.square" catalog="system" width="128" height="114"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="photo.on.rectangle" catalog="system" width="128" height="96"/>
+        <image name="rectangle.dashed" catalog="system" width="128" height="93"/>
         <image name="rectangle.stack.fill" catalog="system" width="128" height="122"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -282,9 +282,6 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
