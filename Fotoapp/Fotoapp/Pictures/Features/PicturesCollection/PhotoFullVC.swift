@@ -34,6 +34,7 @@ class PhotoFullVC: UIViewController {
         closeOutlet.layer.cornerRadius = 20
         imageFullScreen.image = PicturesViewModel.selectedImage
         
+        
         closeAction(self)
         
     }

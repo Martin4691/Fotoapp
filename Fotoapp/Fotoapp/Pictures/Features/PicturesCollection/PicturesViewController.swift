@@ -88,6 +88,7 @@ extension PicturesViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
         PicturesViewModel.selectedImage = ImagesData.imageForPosition(indexPath.row)
+        PicturesViewModel.selectedIndex = indexPath.row
         performSegue(withIdentifier: "segueToDetail", sender: nil)
         print(indexPath.item)
     }
