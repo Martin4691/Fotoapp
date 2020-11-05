@@ -59,8 +59,7 @@ class PhotoFullVC: UIViewController {
         closeOutlet.layer.cornerRadius = 20
         imageFullScreen.image = PicturesViewModel.selectedImage
         titleOutlet.text = "Imagen Nº: \(PicturesViewModel.selectedIndex!)"
-        likeOutlet.text = "pollo gordo"
-        
+
         closeAction(self)
         
     }
