@@ -332,6 +332,7 @@
                         <outlet property="closeOutlet" destination="0MV-19-lDL" id="bz4-Qs-6aq"/>
                         <outlet property="imageFullScreen" destination="Zkh-sL-MxB" id="TAS-WM-Jbl"/>
                         <outlet property="labelOutlet" destination="KC7-nv-7gn" id="tGr-iR-ec7"/>
+                        <outlet property="likeOutlet" destination="Wgo-Pe-9Ac" id="FEb-Yj-zjp"/>
                         <outlet property="switchOutlet" destination="Ni1-Ef-q6a" id="Y0Y-kn-gSX"/>
                         <outlet property="titleOutlet" destination="a80-J0-qEd" id="34o-Og-DH1"/>
                     </connections>
