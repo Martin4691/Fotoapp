@@ -10,6 +10,7 @@ import UIKit
 class PhotoFullVC: UIViewController {
     
     
+    
     @IBOutlet weak var likeOutlet: UILabel!
     
     
@@ -29,14 +30,22 @@ class PhotoFullVC: UIViewController {
 
     
     override func viewDidAppear(_ animated: Bool) {
-        switchOutlet.isOn = ImagesData.likeForPosition(PicturesViewModel.selectedIndex!)
-        titleOutlet.text = ImagesData.getTitle(PicturesViewModel.selectedIndex!)
+        guard let unwrappingNumber: Int = PicturesViewModel.selectedIndex else {
+            print("nill evitado")
+            return
+        }
+        switchOutlet.isOn = ImagesData.likeForPosition(unwrappingNumber)
+        titleOutlet.text = ImagesData.getTitle(unwrappingNumber)
         let favorite: String = switchOutlet.isOn ? "Favorite" : "No Favorite"
-        labelOutlet.text = "\(favorite) \n\(titleOutlet.text!) \n\(PicturesViewModel.selectedIndex! + 1)"
+        labelOutlet.text = "\(favorite) \n\(titleOutlet.text!) \n\(unwrappingNumber + 1)"
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        ImagesData.setTitle("\(titleOutlet.text!)", position: PicturesViewModel.selectedIndex!)
+        guard let unwrappingNumber: Int = PicturesViewModel.selectedIndex else {
+            print("nill evitado")
+            return
+        }
+        ImagesData.setTitle("\(titleOutlet.text!)", position: unwrappingNumber)
         print(titleOutlet.text!)
     }
     
@@ -44,11 +53,15 @@ class PhotoFullVC: UIViewController {
     
     
     @IBAction func switchAction(_ sender: UISwitch) {
+        guard let unwrappingNumber: Int = PicturesViewModel.selectedIndex else {
+            print("nill evitado")
+            return
+        }
         if switchOutlet.isOn == true {
-            ImagesData.likeImageAtPosition(PicturesViewModel.selectedIndex!)
+            ImagesData.likeImageAtPosition(unwrappingNumber)
             print("Switch Is On!")
         } else if switchOutlet.isOn == false {
-            ImagesData.dislikeImageAtPosition(PicturesViewModel.selectedIndex!)
+            ImagesData.dislikeImageAtPosition(unwrappingNumber)
             print("Switch Is Off!")
         }
     }
@@ -56,9 +69,13 @@ class PhotoFullVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let unwrappingNumber: Int = PicturesViewModel.selectedIndex else {
+            print("nill evitado")
+            return
+        }
         closeOutlet.layer.cornerRadius = 20
         imageFullScreen.image = PicturesViewModel.selectedImage
-        titleOutlet.text = "Imagen Nº: \(PicturesViewModel.selectedIndex!)"
+        titleOutlet.text = "Imagen Nº: \(unwrappingNumber)"
 
         closeAction(self)
         
