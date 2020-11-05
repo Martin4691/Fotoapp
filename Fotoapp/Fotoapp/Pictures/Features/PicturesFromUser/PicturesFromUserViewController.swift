@@ -15,7 +15,8 @@ class PicturesFromUserViewController: UIViewController, UIImagePickerControllerD
     
     @IBOutlet weak var buttonOut: UIButton!
     
-    @IBAction func buttonAct(_ sender: Any) {
+  @IBOutlet weak var choosePhoto: UIButton!
+  @IBAction func buttonAct(_ sender: Any) {
         print("Button Push")
         func openGallary()
         {
@@ -46,6 +47,7 @@ class PicturesFromUserViewController: UIViewController, UIImagePickerControllerD
         super.viewDidLoad()
         buttonOut.layer.cornerRadius = 10
         image.image = UIImage(named: "256")
+      choosePhoto.setTitle("Choose a Pic!", for: .normal)
         
     }
 
