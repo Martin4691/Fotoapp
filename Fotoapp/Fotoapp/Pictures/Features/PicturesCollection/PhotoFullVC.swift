@@ -9,6 +9,12 @@ import UIKit
 
 class PhotoFullVC: UIViewController {
     
+    
+    @IBOutlet weak var likeOutlet: UILabel!
+    
+    
+    
+    
     @IBOutlet weak var imageFullScreen: UIImageView!
     
     @IBOutlet weak var titleOutlet: UITextField!
@@ -53,6 +59,7 @@ class PhotoFullVC: UIViewController {
         closeOutlet.layer.cornerRadius = 20
         imageFullScreen.image = PicturesViewModel.selectedImage
         titleOutlet.text = "Imagen Nº: \(PicturesViewModel.selectedIndex!)"
+        likeOutlet.text = "pollo gordo"
         
         closeAction(self)
         
