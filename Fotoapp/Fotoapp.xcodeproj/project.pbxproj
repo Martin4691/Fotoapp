@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B48B53925514E2A007FFAAE /* PicturesFromUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B48B53825514E2A007FFAAE /* PicturesFromUserViewController.swift */; };
 		5B50C03525481706009FEE2A /* PicturesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B50C03425481706009FEE2A /* PicturesCell.xib */; };
+		5B69CE1B255465C300B15604 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69CE1A255465C300B15604 /* EmailViewController.swift */; };
 		5B7B62E9254C289800D780C4 /* PhotoFullVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7B62E8254C289800D780C4 /* PhotoFullVC.swift */; };
 		5B7B62EC254C306B00D780C4 /* PicturesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7B62EB254C306B00D780C4 /* PicturesViewModel.swift */; };
 		5B8F7A89254FF9F400F49543 /* RandomPicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F7A88254FF9F400F49543 /* RandomPicturesViewController.swift */; };
@@ -86,6 +87,7 @@
 /* Begin PBXFileReference section */
 		5B48B53825514E2A007FFAAE /* PicturesFromUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesFromUserViewController.swift; sourceTree = "<group>"; };
 		5B50C03425481706009FEE2A /* PicturesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicturesCell.xib; sourceTree = "<group>"; };
+		5B69CE1A255465C300B15604 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		5B7B62E8254C289800D780C4 /* PhotoFullVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFullVC.swift; sourceTree = "<group>"; };
 		5B7B62EB254C306B00D780C4 /* PicturesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesViewModel.swift; sourceTree = "<group>"; };
 		5B8F7A88254FF9F400F49543 /* RandomPicturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPicturesViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +175,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B4FC3012554397A00C6CDA9 /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				5B69CE1A255465C300B15604 /* EmailViewController.swift */,
+			);
+			path = Email;
+			sourceTree = "<group>";
+		};
 		5B8F7A7D254FF8AB00F49543 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +325,7 @@
 		5BB91E72254709E900FD18C4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				5B4FC3012554397A00C6CDA9 /* Email */,
 				5B8F7A7D254FF8AB00F49543 /* Common */,
 				5B8F7A7E254FF8B400F49543 /* PicturesFromUser */,
 				5B8F7A7F254FF8C200F49543 /* RandomPictures */,
@@ -475,6 +486,7 @@
 				5BB91E5E2546CF7800FD18C4 /* SceneDelegate.swift in Sources */,
 				5BA3E6C82552E54D00916B8B /* ImagesData.swift in Sources */,
 				5B7B62EC254C306B00D780C4 /* PicturesViewModel.swift in Sources */,
+				5B69CE1B255465C300B15604 /* EmailViewController.swift in Sources */,
 				5B8F7A89254FF9F400F49543 /* RandomPicturesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
