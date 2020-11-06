@@ -13,11 +13,18 @@ class EmailViewController: UIViewController {
     
     private let nameEmailKey: String = "MyNameAndEmailKey"
     
+    private var savedKeys: [String] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let storedValue: String = UserDefaults.standard.string(forKey: nameEmailKey) {
-            textView.text.append("\n" + storedValue)
-            print("Stored value: \(storedValue)")
+        
+        if let storedValue: [String] = UserDefaults.standard.stringArray(forKey: nameEmailKey) {
+            savedKeys.append(contentsOf: storedValue)
+            print("Stored value: \(savedKeys)")
+        }
+        for key in savedKeys {
+            textView.text.append("\n" + key)
         }
     }
     
@@ -26,16 +33,21 @@ class EmailViewController: UIViewController {
               let email = emailTextField.text else { return }
         
         let fullString: String = "\(name);\(email)"
-        UserDefaults.standard.set(fullString, forKey: nameEmailKey)
+        savedKeys.append(fullString)
+        UserDefaults.standard.set(savedKeys, forKey: nameEmailKey)
+        UserDefaults.standard.synchronize()
+        print("\(savedKeys)")
     }
     
+    
     @IBAction func resetAction(_ sender: Any) {
-
+        
         let refreshAlert = UIAlertController(title: "Are you sure?", message: "All data will be lost.", preferredStyle: UIAlertController.Style.alert)
         
-        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: { (action: UIAlertAction!) in
             print("Handle Ok logic here")
             UserDefaults.standard.removeObject(forKey: self.nameEmailKey)
+            UserDefaults.standard.synchronize()
             print("Reset Done!")
         }))
         
@@ -45,10 +57,6 @@ class EmailViewController: UIViewController {
         }))
         
         present(refreshAlert, animated: true, completion: nil)
-        
-        
-        
-        
     }
     
     

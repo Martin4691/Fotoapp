@@ -267,7 +267,7 @@
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HfI-cJ-Xz0">
                                 <rect key="frame" x="0.0" y="615" width="414" height="178"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Aqui van los nombres y correos electronicos almacenados. Tlf: 900123456      @:  ayuwoki@powerflower.ch" translatesAutoresizingMaskIntoConstraints="NO" id="W8h-32-gHG">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Se encontraron los siguientes datos en la memoria:" translatesAutoresizingMaskIntoConstraints="NO" id="W8h-32-gHG">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="137"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <constraints>
