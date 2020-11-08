@@ -47,7 +47,7 @@ class PicturesFromUserViewController: UIViewController, UIImagePickerControllerD
         super.viewDidLoad()
         buttonOut.layer.cornerRadius = 10
         image.image = UIImage(named: "256")
-      choosePhoto.setTitle("Choose a Pic!", for: .normal)
+      choosePhoto.setTitle("Choose a Photo!", for: .normal)
         
     }
 

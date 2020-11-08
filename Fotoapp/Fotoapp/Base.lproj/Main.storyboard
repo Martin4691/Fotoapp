@@ -185,13 +185,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="of4-uM-lb7" userLabel="image">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="of4-uM-lb7" userLabel="image">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXl-7e-vfv" userLabel="button">
-                                <rect key="frame" x="285" y="763" width="109" height="30"/>
+                                <rect key="frame" x="264" y="743" width="120" height="40"/>
                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3Ba-sP-tM0"/>
+                                    <constraint firstAttribute="width" constant="120" id="u0z-Wp-WUM"/>
+                                </constraints>
                                 <state key="normal" title="Choose a Photo">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -203,9 +206,12 @@
                         <viewLayoutGuide key="safeArea" id="UXl-tm-Lgp"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="UXl-tm-Lgp" firstAttribute="trailing" secondItem="VXl-7e-vfv" secondAttribute="trailing" constant="20" id="8Fn-rf-8uo"/>
-                            <constraint firstItem="VXl-7e-vfv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UXl-tm-Lgp" secondAttribute="leading" symbolic="YES" id="nBa-Nf-ktQ"/>
-                            <constraint firstItem="UXl-tm-Lgp" firstAttribute="bottom" secondItem="VXl-7e-vfv" secondAttribute="bottom" constant="20" id="ugd-ZL-YCT"/>
+                            <constraint firstItem="of4-uM-lb7" firstAttribute="trailing" secondItem="UXl-tm-Lgp" secondAttribute="trailing" id="2NX-vf-MAO"/>
+                            <constraint firstItem="of4-uM-lb7" firstAttribute="top" secondItem="UXl-tm-Lgp" secondAttribute="top" id="Jjs-VG-juZ"/>
+                            <constraint firstItem="of4-uM-lb7" firstAttribute="leading" secondItem="UXl-tm-Lgp" secondAttribute="leading" id="O5o-Ft-MDv"/>
+                            <constraint firstItem="UXl-tm-Lgp" firstAttribute="trailing" secondItem="VXl-7e-vfv" secondAttribute="trailing" constant="30" id="fVv-Uj-8n1"/>
+                            <constraint firstItem="of4-uM-lb7" firstAttribute="bottom" secondItem="UXl-tm-Lgp" secondAttribute="bottom" id="q12-4T-4r2"/>
+                            <constraint firstItem="UXl-tm-Lgp" firstAttribute="bottom" secondItem="VXl-7e-vfv" secondAttribute="bottom" constant="30" id="sGD-Tg-8ML"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Edition" image="rectangle.dashed" catalog="system" id="Ge2-sb-3AE"/>
@@ -315,6 +321,8 @@
                     <connections>
                         <outlet property="emailTextField" destination="bhp-fj-Ii5" id="Uo8-pZ-tYV"/>
                         <outlet property="nameTextField" destination="Mkp-BI-BFs" id="QsU-qD-BhO"/>
+                        <outlet property="resetOut" destination="Mj9-BO-fPm" id="ipD-Jz-jyH"/>
+                        <outlet property="saveOut" destination="NBg-Gi-Bo6" id="XpR-FV-Ly9"/>
                         <outlet property="textView" destination="W8h-32-gHG" id="8hO-EA-Urf"/>
                     </connections>
                 </viewController>

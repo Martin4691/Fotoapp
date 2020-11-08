@@ -10,6 +10,8 @@ class EmailViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var saveOut: UIButton!
+    @IBOutlet weak var resetOut: UIButton!
     
     private let nameEmailKey: String = "MyNameAndEmailKey"
     
@@ -18,6 +20,9 @@ class EmailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textView.layer.cornerRadius = 10
+        saveOut.layer.cornerRadius = 10
+        resetOut.layer.cornerRadius = 10
         
         if let storedValue: [String] = UserDefaults.standard.stringArray(forKey: nameEmailKey) {
             savedKeys.append(contentsOf: storedValue)
