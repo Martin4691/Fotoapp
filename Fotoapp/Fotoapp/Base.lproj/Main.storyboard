@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k6b-0o-BoA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k6b-0o-BoA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -248,23 +248,43 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBg-Gi-Bo6">
-                                        <rect key="frame" x="224" y="88" width="150" height="30"/>
-                                        <color key="backgroundColor" red="0.70541440448255655" green="1" blue="0.65000490930802557" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="xSE-y0-Y5p"/>
-                                        </constraints>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Save"/>
-                                        <connections>
-                                            <action selector="saveTouched:" destination="KFU-VS-94f" eventType="touchUpInside" id="ZQ9-l3-5qY"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="PTg-hI-DPR">
+                                        <rect key="frame" x="0.0" y="88" width="374" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBM-md-ESw">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                                <color key="backgroundColor" red="0.72069026700000005" green="0.79365623689999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="3EJ-LM-9kf"/>
+                                                    <constraint firstAttribute="width" constant="150" id="CGR-uz-PgH"/>
+                                                </constraints>
+                                                <state key="normal" title="Send">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sendAct:" destination="KFU-VS-94f" eventType="touchUpInside" id="wZ0-IA-3fe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBg-Gi-Bo6">
+                                                <rect key="frame" x="224" y="0.0" width="150" height="30"/>
+                                                <color key="backgroundColor" red="0.70541440448255655" green="1" blue="0.65000490930802557" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="xSE-y0-Y5p"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="saveTouched:" destination="KFU-VS-94f" eventType="touchUpInside" id="ZQ9-l3-5qY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="bhp-fj-Ii5" secondAttribute="trailing" id="F0I-Hq-hQq"/>
                                     <constraint firstItem="bhp-fj-Ii5" firstAttribute="top" secondItem="Mkp-BI-BFs" secondAttribute="bottom" constant="10" id="OTU-TQ-ZGG"/>
                                     <constraint firstItem="Mkp-BI-BFs" firstAttribute="top" secondItem="YzL-vP-FtC" secondAttribute="top" id="YkN-jR-iYD"/>
+                                    <constraint firstItem="PTg-hI-DPR" firstAttribute="leading" secondItem="YzL-vP-FtC" secondAttribute="leading" id="jG5-Ec-XKM"/>
                                     <constraint firstItem="bhp-fj-Ii5" firstAttribute="leading" secondItem="YzL-vP-FtC" secondAttribute="leading" id="qCe-wR-XbJ"/>
                                     <constraint firstItem="Mkp-BI-BFs" firstAttribute="leading" secondItem="YzL-vP-FtC" secondAttribute="leading" id="qpm-cZ-UcO"/>
                                     <constraint firstAttribute="trailing" secondItem="Mkp-BI-BFs" secondAttribute="trailing" id="ryB-L8-YhA"/>
@@ -323,6 +343,7 @@
                         <outlet property="nameTextField" destination="Mkp-BI-BFs" id="QsU-qD-BhO"/>
                         <outlet property="resetOut" destination="Mj9-BO-fPm" id="ipD-Jz-jyH"/>
                         <outlet property="saveOut" destination="NBg-Gi-Bo6" id="XpR-FV-Ly9"/>
+                        <outlet property="sendOut" destination="fBM-md-ESw" id="9fE-zh-Xxx"/>
                         <outlet property="textView" destination="W8h-32-gHG" id="8hO-EA-Urf"/>
                     </connections>
                 </viewController>
@@ -330,10 +351,10 @@
             </objects>
             <point key="canvasLocation" x="995.65217391304361" y="1508.7053571428571"/>
         </scene>
-        <!--Photo Full Screen -->
+        <!--Photo Full Screen-->
         <scene sceneID="Jmy-IY-Wrd">
             <objects>
-                <viewController title="Photo Full Screen " id="CQf-fK-SvX" customClass="PhotoFullVC" customModule="Fotoapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Photo Full Screen " id="CQf-fK-SvX" userLabel="Photo Full Screen" customClass="PhotoFullVC" customModule="Fotoapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fBT-vF-dFz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

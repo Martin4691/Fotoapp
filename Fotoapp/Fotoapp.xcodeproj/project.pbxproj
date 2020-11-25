@@ -339,8 +339,8 @@
 			children = (
 				5BB91E7425470A2800FD18C4 /* PicturesViewController.swift */,
 				5B7B62EB254C306B00D780C4 /* PicturesViewModel.swift */,
-				5BB91E7825470A3A00FD18C4 /* PicturesCell.swift */,
 				5B7B62E8254C289800D780C4 /* PhotoFullVC.swift */,
+				5BB91E7825470A3A00FD18C4 /* PicturesCell.swift */,
 				5B50C03425481706009FEE2A /* PicturesCell.xib */,
 			);
 			path = PicturesCollection;
@@ -637,6 +637,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JN234S6LJ9;
 				INFOPLIST_FILE = Fotoapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -656,6 +657,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JN234S6LJ9;
 				INFOPLIST_FILE = Fotoapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

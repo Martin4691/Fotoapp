@@ -29,6 +29,7 @@ class PicturesViewController: UIViewController {
         stackScreen1.layer.cornerRadius = 25
         
     }
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         
