@@ -39,6 +39,8 @@ class EmailViewController: UIViewController, MFMailComposeViewControllerDelegate
         }
     }
     
+    //MARK: - ACTIONS
+    
     @IBAction func saveTouched(_ sender: Any) {
         guard let name = nameTextField.text,
               let email = emailTextField.text else { return }
@@ -71,42 +73,44 @@ class EmailViewController: UIViewController, MFMailComposeViewControllerDelegate
     }
     
     
-    
     @IBAction func sendAct(_ sender: Any) {
         let mailComposeViewController = configuredMailComposeViewController()
-                if MFMailComposeViewController.canSendMail() {
-                    self.present(mailComposeViewController, animated: true, completion: nil)
-                } else {
-                    self.showSendMailErrorAlert()
-                }
-            }
-        
-    func configuredMailComposeViewController() -> MFMailComposeViewController {
-            let mailComposerVC = MFMailComposeViewController()
-            mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
-
-        mailComposerVC.setToRecipients(["\(String(describing: emailTextField.text ?? ""))"])
-            mailComposerVC.setSubject("Test email...")
-        mailComposerVC.setMessageBody("Hola \(String(describing: nameTextField.text ?? "")),\n", isHTML: false)
-
-            return mailComposerVC
+        if MFMailComposeViewController.canSendMail() {
+            self.present(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            self.showSendMailErrorAlert()
         }
+    }
     
-
-func showSendMailErrorAlert() {
-    _ = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: UIAlertController.Style.alert)
-//        sendMailErrorAlert.show()
+    
+    // MARK: - Func Tools
+    
+    func configuredMailComposeViewController() -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
+        
+        mailComposerVC.setToRecipients(["\(String(describing: emailTextField.text ?? ""))"])
+        mailComposerVC.setSubject("Test email...")
+        mailComposerVC.setMessageBody("Hola \(String(describing: nameTextField.text ?? "")),\n", isHTML: false)
+        
+        return mailComposerVC
+    }
+    
+    
+    func showSendMailErrorAlert() {
+        _ = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: UIAlertController.Style.alert)
+        //        sendMailErrorAlert.show()
     }
     
 }
 
 
-    // MARK: MFMailComposeViewControllerDelegate
+// MARK: MFMailComposeViewControllerDelegate
 
-    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
-        controller.dismiss(animated: true, completion: nil)
-
-    }
+func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+    controller.dismiss(animated: true, completion: nil)
+    
+}
 
 
 

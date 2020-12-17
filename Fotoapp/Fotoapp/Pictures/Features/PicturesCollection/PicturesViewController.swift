@@ -8,6 +8,7 @@ import Foundation
 import UIKit
 
 class PicturesViewController: UIViewController {
+    
     private var numOfHorizontalCells: CGFloat = 5.0
     private var marginBetweenCells: CGFloat = 4.0
     private let reuseIdentifier = String(describing: PicturesCell.self) // essto sirve para decir: PicturesCell
@@ -20,6 +21,9 @@ class PicturesViewController: UIViewController {
     @IBOutlet weak var button4Out: UIButton!
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+    // MARK: - Appears & Transitions:
     
     override func viewDidLoad() {
         let nib = UINib(nibName: reuseIdentifier, bundle: nil)
@@ -107,6 +111,9 @@ extension PicturesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_: UICollectionView, layout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt: Int) -> CGFloat {
         return marginBetweenCells
     }
+    
+    
+    // MARK: - Actions:
     
     // AQUI COMENZAMOS CON LOS BOTONES DEL ESTACK DE LA PRIMERA PANTALLA.
     func buttonSelected() {

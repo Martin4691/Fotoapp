@@ -8,14 +8,10 @@
 import UIKit
 
 class PhotoFullVC: UIViewController {
-    
-    
-    
+
+    //MARK: - OUTLETS:
     @IBOutlet weak var likeOutlet: UILabel!
-    
-    
-    
-    
+
     @IBOutlet weak var imageFullScreen: UIImageView!
     
     @IBOutlet weak var titleOutlet: UITextField!
@@ -28,6 +24,7 @@ class PhotoFullVC: UIViewController {
     
     @IBOutlet weak var labelOutlet: UILabel!
 
+    // MARK: - APPEARS + Siwtch Button:
     
     override func viewDidAppear(_ animated: Bool) {
         guard let unwrappingNumber: Int = PicturesViewModel.selectedIndex else {

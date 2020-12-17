@@ -42,6 +42,8 @@ class RandomPicturesViewController: UIViewController {
         //        print("random number: \(randomNumber)")
     }
     
+    
+    // MARK: - Imagen Aleatoria
     //          SOLUCION MIA para imagen aleatoria:
     func getRandomPictures() -> UIImage? {
         let randomImage = ImagesData.imageForPosition(Int.random(in: 0...ImagesData.numOfImages()))
@@ -56,6 +58,7 @@ class RandomPicturesViewController: UIViewController {
     //        imageView.image = getRandomPictures()
     //    }
     
+    // MARK: - Timer:
     //timer nuevo de Swift(2):
     func refreshPicture() {
         UIView.transition(with: imageView,

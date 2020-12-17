@@ -14,9 +14,10 @@ class PicturesFromUserViewController: UIViewController, UIImagePickerControllerD
     var imagePicker: UIImagePickerController = UIImagePickerController()
     
     @IBOutlet weak var buttonOut: UIButton!
+    @IBOutlet weak var choosePhoto: UIButton!
     
-  @IBOutlet weak var choosePhoto: UIButton!
-  @IBAction func buttonAct(_ sender: Any) {
+    
+    @IBAction func buttonAct(_ sender: Any) {
         print("Button Push")
         func openGallary()
         {
@@ -27,13 +28,14 @@ class PicturesFromUserViewController: UIViewController, UIImagePickerControllerD
         }
         openGallary()
     }
-
+    
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let imageCameraRoll = info[.editedImage] as? UIImage
         image.image = imageCameraRoll
         dismiss(animated: true)
     }
-
+    
     //      //SOLUCION CESC PARA IMAGE PICKER CONTROLLER:
     //        if UIImagePickerController.isSourceTypeAviable(.savedPhotosAlbum) {
     //            imagePicker.delegate = self
@@ -47,10 +49,10 @@ class PicturesFromUserViewController: UIViewController, UIImagePickerControllerD
         super.viewDidLoad()
         buttonOut.layer.cornerRadius = 10
         image.image = UIImage(named: "256")
-      choosePhoto.setTitle("Choose a Photo!", for: .normal)
+        choosePhoto.setTitle("Choose a Photo!", for: .normal)
         
     }
-
+    
     /*
      // MARK: - Navigation
      

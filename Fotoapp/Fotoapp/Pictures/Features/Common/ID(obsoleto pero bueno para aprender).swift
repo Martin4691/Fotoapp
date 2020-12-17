@@ -4,6 +4,11 @@
 //
 //  Created by Martín on 29/10/2020.
 //
+
+
+//      MARK: - ARCHIVO OBSOLETO!!
+// Aqui un archivo que ya no se usa pero esta bien recordar algunos conceptos de el por si fueran necesarios para el futuro.
+
 import UIKit
 import Foundation
 
